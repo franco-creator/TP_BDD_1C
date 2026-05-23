@@ -30,13 +30,9 @@ Todas las columnas creadas para las nuevas tablas **<u>deberán respetar los mis
 
 Tener en cuenta que DEBEN crear su **propio esquema** con el nombre de su grupo, esto permite que tengan su espacio propio de resolución y no se mezclen y/o utilicen la solución de otro grupo o la propia que tenemos para corrección del trabajo práctico
 
-## Objetivos del Trabajo Práctico
+## A hacer ahora 
 
-Este Trabajo Práctico (TP) tiene como finalidad que el alumno logre:
+### Entrega de Modelo de Datos Relacional y Migración
 
-* **Familiarizarse** con el diseño, creación y manipulación de una Base de Datos Relacional Compleja.
-* **Diseñar y Normalizar** un Modelo de Datos Transaccional.
-* **Desarrollar** Scripts de Base de Datos SQL Server complejos (DIF, DDL, DML).
-* **Migrar** datos masivos de estructuras de datos no normalizadas a estructuras de datos normalizadas mediante el uso de Stored Procedures.
-* **Diseñar** un Modelo Analítico de Inteligencia de Negocios (Esquema estrella / copo de nieve).
-* **Migrar** datos desde un modelo transaccional normalizado a un modelo analítico BI (Hechos y Dimensiones).
+En esta entrega se deberán enviar:
+* El script de creación y migración de datos (un único script) del modelo relacional según el formato especificado en la sección de formato de entrega del presente documento
