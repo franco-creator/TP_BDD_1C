@@ -140,7 +140,7 @@ CREATE TABLE LOS_RELACIONALES.aeropuerto_llegada(
 
 CREATE TABLE LOS_RELACIONALES.vuelo(
 	NRO_VUELO bigint IDENTITY PRIMARY KEY,
-	COD_AEROLINEA bigint REFERENCES LOS_RELACIONALES.aerolinea(COD_AEROLINEA),  -- REVISAR
+	COD_AEROLINEA nvarchar(255) REFERENCES LOS_RELACIONALES.aerolinea(COD_AEROLINEA),  -- REVISAR
 	COD_AEROPUERTO_SALIDA nvarchar(10) REFERENCES LOS_RELACIONALES.aeropuerto_salida(AER_SAL_CODIGO),
 	COD_AEROPUERTO_LLEGADA nvarchar(10) REFERENCES LOS_RELACIONALES.aeropuerto_llegada(AER_LLEG_CODIGO),
 	FECHA_SALIDA date,
@@ -439,7 +439,7 @@ BEGIN
 	)
 	SELECT DISTINCT
 		m.Aerolinea_Codigo,
-		a.ALIANZA,
+		a.ALIANZA_ID,
 		m.Aerolinea_Nombre, 
 		m.Aerolinea_Pais
 	FROM gd_esquema.Maestra m
@@ -1084,6 +1084,8 @@ BEGIN TRY
 	EXECUTE migracion_detalle_venta_hospedaje
 	EXECUTE migracion_detalle_venta_excursion
 	EXECUTE migracion_detalle_encuesta_puntaje
+	
+	COMMIT TRANSACTION
 END TRY
 BEGIN CATCH
 	-- REVISAR ERROR
